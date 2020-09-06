@@ -28,4 +28,4 @@ hs_err_pid*
 *.iml
 *.ipr
 #app properties
-src/main/resources/application.properties
+application.properties
