@@ -14,7 +14,7 @@ public class UserServiceImpl implements UserService {
     private UserRepository repository;
 
     @Override
-    public void RegisterNewUser(CreateUserDto createUserDto) {
+    public void registerNewUser(CreateUserDto createUserDto) {
         User user = User.builder()
                 .userName(createUserDto.getUserName())
                 .email(createUserDto.getEmail())
@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean DeleteUser(User user) {
+    public boolean deleteUser(User user) {
         try {
             repository.delete(user);
         }
