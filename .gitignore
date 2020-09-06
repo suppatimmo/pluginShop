@@ -8,7 +8,7 @@
 *.ctxt
 
 # Mobile Tools for Java (J2ME)
-.mtj.tmp/git
+.mtj.tmp
 
 # Package Files #
 *.jar
@@ -21,3 +21,6 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+#app properties
+src/main/resources/application.properties
