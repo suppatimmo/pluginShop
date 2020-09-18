@@ -1,4 +1,4 @@
-package model;
+package com.sda.model;
 
 public enum ROLE {
     USER,

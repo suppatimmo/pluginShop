@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,21 +23,34 @@
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:feature" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="651afa4a-cb3a-425e-987c-3b0a3699152b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com.sda/PluginShopApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com.sda/controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/logo1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_3_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_3_4_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pluginShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pluginShop.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PluginShopApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/PluginShopApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/IndexController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/CreateUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.sda/dto/CreateUserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/PluginShopApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/ROLE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.sda/model/ROLE.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.sda/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.sda/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.sda/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.sda/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +68,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Users\boros\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1h5VZAncZgKto2WVBWoQNqZxhLX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -72,23 +95,73 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/img" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\boros\IdeaProjects\pluginShop\src\main\resources\static\img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\boros\IdeaProjects\pluginShop\src\main\java" />
+      <recent name="C:\Users\boros\IdeaProjects\pluginShop\src\main\com.sda" />
       <recent name="D:\pluginShop\src\main\resources\static\css" />
       <recent name="D:\pluginShop\src\main\resources\static" />
       <recent name="D:\pluginShop\src\main\resources\templates" />
-      <recent name="D:\pluginShop\src\main\java" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.PluginShopApplication (2)">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="pluginShop" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PluginShopApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="pluginShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="boot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="boot.PluginShopApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PluginShopApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="pluginShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sda.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sda.PluginShopApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PluginShopApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="pluginShop" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="main.PluginShopApplication" />
@@ -96,7 +169,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.PluginShopApplication (2)" />
+        <item itemvalue="Spring Boot.PluginShopApplication (1)" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -108,11 +189,17 @@
       <option name="presentableId" value="Default" />
       <updated>1599300992085</updated>
       <workItem from="1599386822923" duration="1233000" />
+      <workItem from="1599403378613" duration="2575000" />
+      <workItem from="1600005566702" duration="663000" />
+      <workItem from="1600195225956" duration="1362000" />
+      <workItem from="1600337465242" duration="1583000" />
+      <workItem from="1600354952386" duration="1189000" />
+      <workItem from="1600416883937" duration="17564000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -130,37 +217,77 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1556" height="324" key="GridCell.Tab.0.bottom" timestamp="1599394799174">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="432" y="146" key="#Plugins" timestamp="1600427458417">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="432" y="146" key="#Plugins/0.0.1680.1010@0.0.1680.1010" timestamp="1600427458417" />
+    <state x="602" y="307" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600434130192">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="602" y="307" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1010@0.0.1680.1010" timestamp="1600434130192" />
+    <state x="520" y="241" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600337688238">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="520" y="241" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1600337688238" />
+    <state x="662" y="429" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1600434184857">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="662" y="429" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1600434184857" />
+    <state x="620" y="260" key="FileChooserDialogImpl" timestamp="1600426802909">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="620" y="260" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1600426802909" />
+    <state width="1637" height="271" key="GridCell.Tab.0.bottom" timestamp="1600445916091">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1556" height="324" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1599394799174" />
-    <state width="1556" height="324" key="GridCell.Tab.0.center" timestamp="1599394799174">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1637" height="271" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1600445916091" />
+    <state width="1637" height="271" key="GridCell.Tab.0.center" timestamp="1600445916091">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1556" height="324" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1599394799174" />
-    <state width="1556" height="324" key="GridCell.Tab.0.left" timestamp="1599394799173">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1637" height="271" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1600445916091" />
+    <state width="1637" height="271" key="GridCell.Tab.0.left" timestamp="1600445916091">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1556" height="324" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1599394799173" />
-    <state width="1556" height="324" key="GridCell.Tab.0.right" timestamp="1599394799174">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1637" height="271" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1600445916091" />
+    <state width="1637" height="271" key="GridCell.Tab.0.right" timestamp="1600445916091">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1556" height="324" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1599394799174" />
-    <state width="1556" height="324" key="GridCell.Tab.1.bottom" timestamp="1599394799174">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1637" height="271" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1600445916091" />
+    <state width="1637" height="271" key="GridCell.Tab.1.bottom" timestamp="1600445916091">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1556" height="324" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1599394799174" />
-    <state width="1556" height="324" key="GridCell.Tab.1.center" timestamp="1599394799174">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1637" height="271" key="GridCell.Tab.1.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1600445916091" />
+    <state width="1637" height="271" key="GridCell.Tab.1.center" timestamp="1600445916091">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1556" height="324" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1599394799174" />
-    <state width="1556" height="324" key="GridCell.Tab.1.left" timestamp="1599394799174">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1637" height="271" key="GridCell.Tab.1.center/0.0.1680.1010@0.0.1680.1010" timestamp="1600445916091" />
+    <state width="1637" height="271" key="GridCell.Tab.1.left" timestamp="1600445916091">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1556" height="324" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1599394799174" />
-    <state width="1556" height="324" key="GridCell.Tab.1.right" timestamp="1599394799174">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1637" height="271" key="GridCell.Tab.1.left/0.0.1680.1010@0.0.1680.1010" timestamp="1600445916091" />
+    <state width="1637" height="271" key="GridCell.Tab.1.right" timestamp="1600445916091">
+      <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state width="1556" height="324" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1599394799174" />
+    <state width="1637" height="271" key="GridCell.Tab.1.right/0.0.1680.1010@0.0.1680.1010" timestamp="1600445916091" />
+    <state x="341" y="150" key="SettingsEditor" timestamp="1600427274561">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="341" y="150" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1600427274561" />
+    <state x="222" y="125" key="new project wizard" timestamp="1600195325540">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="222" y="125" key="new project wizard/0.0.1680.1010@0.0.1680.1010" timestamp="1600195325540" />
+    <state x="503" y="217" width="672" height="678" key="search.everywhere.popup" timestamp="1600427435941">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="503" y="217" width="672" height="678" key="search.everywhere.popup/0.0.1680.1010@0.0.1680.1010" timestamp="1600427435941" />
   </component>
 </project>

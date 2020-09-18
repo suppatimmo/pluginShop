@@ -1,11 +1,11 @@
-package service;
+package com.sda.service;
 
-import dto.CreateUserDto;
-import model.ROLE;
-import model.User;
+import com.sda.dto.CreateUserDto;
+import com.sda.model.ROLE;
+import com.sda.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.UserRepository;
+import com.sda.repository.UserRepository;
 
 @Service
 public class UserServiceImpl implements UserService {
