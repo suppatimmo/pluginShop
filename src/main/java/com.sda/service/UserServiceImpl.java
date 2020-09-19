@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.sda.repository.UserRepository;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -41,5 +43,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean isUserValid(String email, String password) {
         return repository.getUserByEmailAndPassword(email, password) != null;
+    }
+
+    @Override
+    public List<User> findAll() {
+        return repository.findAll();
     }
 }
