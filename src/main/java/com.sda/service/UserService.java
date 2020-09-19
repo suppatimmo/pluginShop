@@ -1,7 +1,7 @@
-package service;
+package com.sda.service;
 
-import dto.CreateUserDto;
-import model.User;
+import com.sda.dto.CreateUserDto;
+import com.sda.model.User;
 
 public interface UserService {
     void registerNewUser(CreateUserDto createUserDto);
