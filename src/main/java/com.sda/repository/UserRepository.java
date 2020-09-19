@@ -9,4 +9,5 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends CrudRepository<User, Integer> {
     User getUserById(Integer id);
+    User getUserByEmailAndPassword(String email, String password);
 }

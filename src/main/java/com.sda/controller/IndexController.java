@@ -1,15 +1,15 @@
 package com.sda.controller;
 
+import com.sda.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import com.sda.service.UserService;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class IndexController {
-
     private UserService service;
 
     @Autowired
@@ -18,8 +18,11 @@ public class IndexController {
     }
 
     @GetMapping(value = {"/", "/index"})
-    public String index() {
-        return "index";
+    public String index(@RequestParam(value = "user", required = false) User user, Model model) {
+        model.addAttribute("user", user);
+        {
+            return "index";
+        }
     }
 
     @GetMapping("/login")
