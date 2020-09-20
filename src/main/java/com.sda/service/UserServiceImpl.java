@@ -5,6 +5,7 @@ import com.sda.model.User;
 import com.sda.repository.UserRepository;
 import org.jboss.aerogear.security.otp.api.Base32;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,13 +17,16 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository repository;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     @Override
     public void registerNewUser(CreateUserDto createUserDto) {
         User user = User.builder()
                 .userName(createUserDto.getUserName())
                 .email(createUserDto.getEmail())
-                .login(createUserDto.getLogin())
-                .password(createUserDto.getPassword())
+                .login(createUserDto.getEmail())
+                .password(passwordEncoder.encode(createUserDto.getPassword()))
                 .pluginsCount(0)
                 .wPLN(0)
                 .keyToAuthorize(Base32.random())
