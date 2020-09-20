@@ -1,13 +1,14 @@
 package com.sda.service;
 
 import com.sda.dto.CreateUserDto;
-import com.sda.model.ROLE;
 import com.sda.model.User;
+import com.sda.repository.UserRepository;
+import org.jboss.aerogear.security.otp.api.Base32;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.sda.repository.UserRepository;
 
 import java.util.List;
+
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -22,9 +23,10 @@ public class UserServiceImpl implements UserService {
                 .email(createUserDto.getEmail())
                 .login(createUserDto.getLogin())
                 .password(createUserDto.getPassword())
-                .Role(ROLE.USER)
                 .pluginsCount(0)
                 .wPLN(0)
+                .keyToAuthorize(Base32.random())
+                .enabled(false)
                 .build();
         repository.save(user);
     }
@@ -33,8 +35,7 @@ public class UserServiceImpl implements UserService {
     public boolean deleteUser(User user) {
         try {
             repository.delete(user);
-        }
-        catch(NullPointerException e) {
+        } catch (NullPointerException e) {
             return false;
         }
         return true;

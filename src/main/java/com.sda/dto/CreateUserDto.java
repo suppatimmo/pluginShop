@@ -3,7 +3,6 @@ package com.sda.dto;
 import com.sun.istack.NotNull;
 import lombok.Builder;
 import lombok.Getter;
-import com.sda.model.ROLE;
 import org.springframework.validation.annotation.Validated;
 
 import org.hibernate.validator.constraints.Length;
