@@ -57,7 +57,6 @@ public class CustomUserDetailsService implements UserDetailsService {
         }
     }
 
-
     private final Collection<? extends GrantedAuthority> getAuthorities(final Collection<Role> roles) {
         return getGrantedAuthorities(getPrivileges(roles));
     }

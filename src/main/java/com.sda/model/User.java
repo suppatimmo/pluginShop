@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.ui.Model;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -48,6 +50,11 @@ public class User {
         int result = 1;
         result = (prime * result) + ((email == null) ? 0 : email.hashCode());
         return result;
+    }
+
+    public String getLogin(Model model) {
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return user.getLogin();
     }
 
     @Override
