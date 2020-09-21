@@ -42,7 +42,7 @@
                 </div>
 
                 <div sec:authorize="isAuthenticated()" class="ht-right">
-                    <span th:text ="${#authentication"></span>
+                    <span th:text ="${wPLN}"></span>
                 </div>
                 <div sec:authorize="isAnonymous()" class="ht-right">
                     <a href="./login.html" th:href="@{/login}" class="login-panel"><i class="fa fa-user"></i>Zaloguj się</a>

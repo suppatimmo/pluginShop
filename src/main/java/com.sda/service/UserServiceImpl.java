@@ -65,4 +65,9 @@ public class UserServiceImpl implements UserService {
     public Optional<User> getUserById(Integer id) {
         return repository.getUserById(id);
     }
+
+    @Override
+    public Optional<User> getOptionalUserByEmail(String email) {
+        return repository.getUserByEmail(email);
+    }
 }

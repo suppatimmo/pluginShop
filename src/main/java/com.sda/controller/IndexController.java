@@ -1,16 +1,15 @@
 package com.sda.controller;
 
 import com.sda.model.User;
+import com.sda.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import com.sda.service.UserService;
-import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.Map;
 import java.util.Optional;
 
 @Controller
@@ -35,10 +34,11 @@ public class IndexController {
 
     private Optional<User> getLoggedUser(Authentication authentication) {
         if (Optional.ofNullable(authentication).isPresent()) {
-            Optional<User> userDetailsOptional = Optional.ofNullable((User) authentication.getPrincipal());
-            if (userDetailsOptional.isPresent()) {
-                User userDetails = userDetailsOptional.get();
-                return service.getUserById(userDetails.getId());// Ta metoda może się różnie nazwyać w zalezności jak dałeś w serwisie Usera np. getById albo get itd.
+            Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+            String username = ((UserDetails)principal).getUsername();
+            Optional<User> UserEntity = service.getOptionalUserByEmail(username);
+            if (UserEntity.isPresent()) {
+                return UserEntity;
             }
         }
         return Optional.empty();
@@ -49,8 +49,7 @@ public class IndexController {
         if (loggedUserOptional.isPresent()) {
             User loggedUser = loggedUserOptional.get();
             model.addAttribute("userName", loggedUser.getUserName());
-            System.out.println(loggedUser.getUserName());
-            System.out.println(loggedUser.getWPLN());
+            model.addAttribute("wPLN", loggedUser.getWPLN());
         }
     }
 }
