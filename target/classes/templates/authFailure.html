@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Fashi Template">
+    <meta name="keywords" content="Fashi, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fashi | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+<!-- Page Preloder -->
+<div id="preloder">
+    <div class="loader"></div>
+</div>
+
+<!-- Header Section Begin -->
+<header class="header-section">
+    <div class="header-top">
+        <div class="container">
+            <div class="ht-left">
+                <div class="mail-service">
+                    <i class=" fa fa-envelope"></i>
+                    smplugins@gmail.com
+                </div>
+            </div>
+            <div class="ht-right">
+                <a href="./login.html" th:href="@{/login}" class="login-panel"><i class="fa fa-user"></i>Zaloguj się</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="inner-header">
+            <div class="row">
+                <div class="col-lg-2 col-md-2" style="margin:auto">
+                    <div class="logo">
+                        <a href="/index">
+                            <img src="img/logo1.png" th:src="@{img/logo1.png}"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header End -->
+
+<!-- Breadcrumb Section Begin -->
+<div class="breacrumb-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-text">
+                    <a href="#"><i class="fa fa-home"></i> Strona główna</a>
+                    <span>Logowanie</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb Form Section Begin -->
+
+<!-- Register Section Begin -->
+<div class="register-login-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="login-form">
+                    <h2>Autoryzacja zakończona niepowodzeniem!</h2>
+                    <h2>Spróbuj ponownie, lub </h2>
+                    <a href="./register.html"  style="font-weight:bold" th:href="@{/authSend}" class="or-login" style="font-weight:bold;">wyślij ponownie link aktywacyjny.</a>
+                    <form th:action="@{/login}" method="post">
+                        <div th:if="${param.error != null}">
+                            <div class="alert alert-danger">
+                                Nieprawidłowy adres e-mail, lub hasło.
+                            </div>
+                        </div>
+                        <div class="group-input">
+                            <label for="email">Adres e-mail</label>
+                            <input type="text" name="email" id="email" placeholder="Adres e-mail" required="true" autofocus="true">
+                        </div>
+                        <div class="group-input">
+                            <label for="password">Hasło *</label>
+                            <input type="text" name="password" id="password" placeholder="Hasło" required="true">
+                        </div>
+                        <div class="group-input gi-check">
+                            <div class="gi-more">
+                                <label for="save-pass">
+                                    Zapamiętaj moje hasło
+                                    <input type="checkbox" id="save-pass">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <a href="#" class="forget-pass">Zapomniałem hasła</a>
+                            </div>
+                        </div>
+                        <button type="submit" class="site-btn login-btn">Zaloguj się</button>
+                    </form>
+                    <div class="switch-login">
+
+                        <a href="./register.html" th:href="@{/register}" class="or-login" style="font-weight:bold;">Nie masz konta?</a>
+                        <a href="./register.html" th:href="@{/register}" class="or-login" style="font-weight:bold;">Załóż je!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Register Form Section End -->
+
+<!-- Js Plugins -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/jquery.zoom.min.js"></script>
+<script src="js/jquery.dd.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

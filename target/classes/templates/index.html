@@ -42,7 +42,7 @@
                 </div>
 
                 <div sec:authorize="isAuthenticated()" class="ht-right">
-                    <span th:href="@{/profile}" th:text="${userName}"><i class="fa fa-user"></i>Profil</span>
+                    <a class="login-panel" th:href="@{/profile}" th:text="${userName}"><i class="fa fa-user"></i>Profil</a>
                     <a href="./logout" th:href="@{/logout}" class="login-panel"><i class="fas fa-sign-out-alt"></i></i>Wyloguj</a>
                 </div>
                 <div sec:authorize="isAnonymous()" class="ht-right">
