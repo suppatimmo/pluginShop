@@ -1,23 +1,23 @@
 package com.sda.dto;
 
 import com.sun.istack.NotNull;
-import lombok.Builder;
+import lombok.Data;
 import lombok.Getter;
-import com.sda.model.ROLE;
+import org.hibernate.validator.constraints.Length;
 import org.springframework.validation.annotation.Validated;
 
-import org.hibernate.validator.constraints.Length;
 import javax.validation.Valid;
 
-@Builder
+// @Builder
 @Getter
 @Validated
+@Data
 public class CreateUserDto {
 
-    @NotNull
-    @Valid
-    @Length(min = 3)
-    private String login;
+//    @NotNull
+//    @Valid
+//    @Length(min = 3)
+//    private String login;
 
     @NotNull
     @Valid
