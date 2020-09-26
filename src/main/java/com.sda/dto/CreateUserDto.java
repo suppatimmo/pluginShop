@@ -13,21 +13,14 @@ import javax.validation.Valid;
 @Validated
 @Data
 public class CreateUserDto {
-
-//    @NotNull
-//    @Valid
-//    @Length(min = 3)
-//    private String login;
+    @NotNull
+    @Valid
+    private String email;
 
     @NotNull
     @Valid
     @Length(min = 3)
     private String userName;
-
-    @NotNull
-    @Valid
-    @Length(min = 5)
-    private String email;
 
     @NotNull
     @Valid

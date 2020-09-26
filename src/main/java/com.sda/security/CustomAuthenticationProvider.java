@@ -20,7 +20,9 @@ public class CustomAuthenticationProvider extends DaoAuthenticationProvider {
         if ((user == null)) {
             throw new BadCredentialsException("Invalid username");
         }
-
+        else if(!user.isEnabled()) {
+            throw new BadCredentialsException("User not enabled");
+        }
         final Authentication result = super.authenticate(auth);
         return new UsernamePasswordAuthenticationToken(user, result.getCredentials(), result.getAuthorities());
     }

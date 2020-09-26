@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="zxx"
-      xmlns:th="http://www.thymeleaf.org">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -69,44 +69,26 @@
             <div class="col-lg-12">
                 <div class="breadcrumb-text">
                     <a href="#"><i class="fa fa-home"></i> Strona główna</a>
-                    <span>Rejestracja</span>
+                    <span>Sukces!</span>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!-- Breadcrumb Form Section Begin -->
 
 <!-- Register Section Begin -->
 <div class="register-login-section spad">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
-                <div class="register-form">
-                    <h2>Panel rejestracji</h2>
-                    <form role="form" name="registerForm" onsubmit="return(validate(this));" th:object="${user}" th:action="@{/register}" method="post">
-                        <div th:if="${error != null}" class="alert alert-danger">Wystąpił błąd. Spróbuj ponownie.</div>
-                        <div th:if="${emailError != null}" class="alert alert-danger">To konto e-mail jest zajęte!</div>
-                        <div id="errorBox" class="alert alert-danger" style="display:none"></div>
-                        <div class="group-input">
-                            <label for="username">Adres e-mail *</label>
-                            <input type="text" onclick="reColor(this)" id="email" name="email" placeholder="Adres e-mail" autofocus="true">
-                        </div>
-                        <div class="group-input">
-                            <label for="username">Nazwa użytkownika *</label>
-                            <input type="text" onclick="reColor(this)" id="username" name="userName" placeholder="Nazwa użytkownika">
-                        </div>
-                        <div class="group-input">
-                            <label for="password">Hasło *</label>
-                            <input type="password" onclick="reColor(this)" id="password" name="password" placeholder="Hasło">
-                        </div>
-                        <div class="group-input">
-                            <label for="passwordConfirmation">Potwierdź hasło *</label>
-                            <input type="text" onclick="reColor(this)" id="passwordConfirmation" name="passwordConfirmation" placeholder="Powtórz hasło">
-                        </div>
-                        <button type="submit" class="site-btn register-btn">ZAREJESTRUJ</button>
-                    </form>
+                <div class="login-form">
+                    <h2>Autoryzacja przebiegła pomyślnie!</h2>
+                    <h2>Możesz się teraz zalogować.</h2>
                     <div class="switch-login">
-                        <a href="./login" th:href="@{/login}" class="or-login" style="font-weight:bold;">Lub przejdź do logowania</a>
+
+                        <a href="./register.html" th:href="@{/register}" class="or-login" style="font-weight:bold;">Nie masz konta?</a>
+                        <a href="./register.html" th:href="@{/register}" class="or-login" style="font-weight:bold;">Załóż je!</a>
                     </div>
                 </div>
             </div>
@@ -116,7 +98,6 @@
 <!-- Register Form Section End -->
 
 <!-- Js Plugins -->
-<script src="js/formHandling.js"></script>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
@@ -127,7 +108,6 @@
 <script src="js/jquery.slicknav.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
-
 </body>
 
 </html>

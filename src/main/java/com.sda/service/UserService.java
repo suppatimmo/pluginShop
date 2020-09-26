@@ -9,7 +9,7 @@ import java.util.Optional;
 public interface UserService {
     void registerNewUser(CreateUserDto createUserDto);
     boolean deleteUser(User user);
-    boolean isUserValid(String email, String password);
+    boolean isEmailExists(String email);
     List<User> findAll();
     User getUserByEmail(String email);
     Optional<User> getUserById(Integer id);
