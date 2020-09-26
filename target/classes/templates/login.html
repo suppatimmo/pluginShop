@@ -86,14 +86,11 @@
                     <h2>Panel logowania</h2>
 
                     <form th:action="@{/login}" method="post">
-                        <div th:if="${param.error != null}">
-                            <div class="alert alert-danger">
-                                Nieprawidłowy adres e-mail, lub hasło.
-                            </div>
-                        </div>
+                        <div class="alert alert-danger" style="display:none"></div>
                         <div class="group-input">
                             <label for="email">Adres e-mail</label>
-                            <input type="text" name="email" id="email" placeholder="Adres e-mail" required="true" autofocus="true">
+                            <input type="text" name="email" id="email" placeholder="Adres e-mail" required="true"
+                                   autofocus="true" pattern="[^]+@[^]+[.][a-z]{2,63}$" autocomplete="email">
                         </div>
                         <div class="group-input">
                             <label for="password">Hasło *</label>
@@ -113,8 +110,10 @@
                     </form>
                     <div class="switch-login">
 
-                        <a href="./register.html" th:href="@{/register}" class="or-login" style="font-weight:bold;">Nie masz konta?</a>
-                        <a href="./register.html" th:href="@{/register}" class="or-login" style="font-weight:bold;">Załóż je!</a>
+                        <a href="./register.html" th:href="@{/register}" class="or-login" style="font-weight:bold;">Nie
+                            masz konta?</a>
+                        <a href="./register.html" th:href="@{/register}" class="or-login" style="font-weight:bold;">Załóż
+                            je!</a>
                     </div>
                 </div>
             </div>

@@ -47,8 +47,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean isUserValid(String email, String password) {
-        return repository.getUserByEmailAndPassword(email, password) != null;
+    public boolean isEmailExists(String email) {
+        return repository.getUserByEmail(email).isPresent();
     }
 
     @Override

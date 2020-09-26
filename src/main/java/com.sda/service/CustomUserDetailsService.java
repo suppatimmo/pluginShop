@@ -12,6 +12,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.Model;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -38,8 +39,9 @@ public class CustomUserDetailsService implements UserDetailsService {
 
             if (user.isEnabled())
                 return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), getAuthorities(user.getRoles()));
-            else
+            else {
                 throw new UsernameNotFoundException("User is not enabled!");
+            }
         } catch (final Exception e) {
             throw new RuntimeException(e);
         }
