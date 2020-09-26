@@ -70,4 +70,15 @@ public class UserServiceImpl implements UserService {
     public Optional<User> getOptionalUserByEmail(String email) {
         return repository.getUserByEmail(email);
     }
+
+    @Override
+    public Optional<User> getUserByKeyToAuthorize(String keytoAuthorize) {
+        return repository.getUserByKeyToAuthorize(keytoAuthorize);
+    }
+
+    @Override
+    public void authorizeUser(User user) {
+        user.setEnabled(true);
+        repository.save(user);
+    }
 }

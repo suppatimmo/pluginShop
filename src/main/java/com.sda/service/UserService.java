@@ -14,4 +14,6 @@ public interface UserService {
     User getUserByEmail(String email);
     Optional<User> getUserById(Integer id);
     Optional<User> getOptionalUserByEmail(String email);
+    Optional<User> getUserByKeyToAuthorize(String keytoAuthorize);
+    void authorizeUser(User user);
 }

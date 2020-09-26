@@ -28,15 +28,6 @@ public class CustomUserDetailsService implements UserDetailsService {
         super();
     }
 
-    /**
-     * Klasa implementująca UserDetailsService umożliwia w spsób bezpieczny pobranie danch użytkownika i przekazuje je do
-     * spring security, aby tam móc sobie na nich operować (trochę taki DataSource w jdbc). Ma jedną użyteczną metodę którą trzeba nadpisać
-     * tj. loadUserByUsername
-     *
-     * @param email
-     * @return
-     * @throws UsernameNotFoundException
-     */
     @Override
     public UserDetails loadUserByUsername(final String email) throws UsernameNotFoundException {
         try {
@@ -44,14 +35,11 @@ public class CustomUserDetailsService implements UserDetailsService {
             if (user == null) {
                 throw new UsernameNotFoundException("No user found with username: " + email);
             }
-            // Tutaj jest jeden hint. Uzywamy wbudowanej klasy User ze spring security (klasa ta implementuje UserDetailsService, więc możemy jej obiekt)
-            //Nie jest to konieczne ale tak poprostu jest łatwiej. W przeciwnym wypadku musiałbyś stwozyć swoją klasę user implementującą interfejs UserDetails.
-            // Tylko ze klasa wbudowana User używa pojęcia uprawnien (uthorities), trzeba więc stworzyć jakąś liste takich uprawnień
-            // Robimy to poprzez przekazania kolekcji Ról danego użytkownika (czyli w zasadzie listy Stringów) i przerabiamy je na
-            // listę List<GrantedAuthority> , któr jest odczytywalna przez springa. Robomy to w metodach getAuthorities,getPrivileges oraz getGrantedAuthorities
-            // Wymusza to na nas stworzenie Encji Role i privileges, których także masz przykłądy w tym folderze
-            // Ogólnie warto bo później będzie można np. limitować użytkownikowi dostęp do pewnych stron na podstawie jego uprawnień
-            return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), getAuthorities(user.getRoles()));
+
+            if (user.isEnabled())
+                return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), getAuthorities(user.getRoles()));
+            else
+                throw new UsernameNotFoundException("User is not enabled!");
         } catch (final Exception e) {
             throw new RuntimeException(e);
         }

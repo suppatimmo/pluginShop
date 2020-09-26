@@ -37,6 +37,7 @@ public class IndexController {
             Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
             String username = ((UserDetails)principal).getUsername();
             Optional<User> UserEntity = service.getOptionalUserByEmail(username);
+
             if (UserEntity.isPresent()) {
                 return UserEntity;
             }
@@ -49,6 +50,7 @@ public class IndexController {
         if (loggedUserOptional.isPresent()) {
             User loggedUser = loggedUserOptional.get();
             model.addAttribute("userName", loggedUser.getUserName());
+            model.addAttribute("pluginsCount", loggedUser.getPluginsCount());
             model.addAttribute("wPLN", loggedUser.getWPLN());
         }
     }
