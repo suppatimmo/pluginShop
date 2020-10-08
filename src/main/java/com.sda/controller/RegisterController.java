@@ -1,7 +1,6 @@
 package com.sda.controller;
 
 import com.sda.dto.CreateUserDto;
-import com.sda.service.AccountViewService;
 import com.sda.service.MailService;
 import com.sda.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,19 +19,17 @@ import javax.validation.Valid;
 public class RegisterController {
     private UserService service;
     private MailService mailService;
-    private AccountViewService accountView;
 
     @Autowired
     public RegisterController(UserService service, MailService mailService) {
         this.service = service;
         this.mailService = mailService;
-        this.accountView = accountView;
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String register(Model model, Authentication authentication) {
         if (authentication != null)
-            accountView.getUserAccountView(model, authentication);
+            return "redirect:index";
         return "register";
     }
 
@@ -47,7 +44,8 @@ public class RegisterController {
         if (!service.isEmailExists(userDto.getEmail())) {
             service.registerNewUser(userDto);
             mailService.sendRegisterMail(userDto.getEmail());
-            return "redirect:index";
+            model.addAttribute("email", userDto.getEmail());
+            return "redirect:authSend";
         } else {
             model.addAttribute("emailError", "emailError");
             return "register";

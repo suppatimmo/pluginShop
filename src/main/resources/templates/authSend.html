@@ -83,11 +83,12 @@
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="login-form">
-                    <h2>Autoryzacja przebiegła pomyślnie!</h2>
-                    <h2>Możesz się teraz zalogować.</h2>
+                    <h2>Rejestracja przebiegła pomyślnie!</h2>
+                    <h2>Wysłaliśmy e-mail na adres</h2>
+                    <h2 size="20px" th:text="${email}">mail</h2>
+                    <h2> W środku znajdziesz link aktywacyjny do konta!</h2>
                     <div class="switch-login">
-
-                        <a href="./register.html" th:href="@{/register}" class="or-login" style="font-weight:bold;">Nie masz konta?</a>
+                        <a href="./login.html" th:href="@{/register}" class="or-login" style="font-weight:bold;">Nie masz konta?</a>
                         <a href="./register.html" th:href="@{/register}" class="or-login" style="font-weight:bold;">Załóż je!</a>
                     </div>
                 </div>

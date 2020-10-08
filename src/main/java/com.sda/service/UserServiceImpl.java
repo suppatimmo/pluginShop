@@ -5,8 +5,12 @@ import com.sda.model.User;
 import com.sda.repository.UserRepository;
 import org.jboss.aerogear.security.otp.api.Base32;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import java.util.List;
 import java.util.Optional;
@@ -80,5 +84,30 @@ public class UserServiceImpl implements UserService {
     public void authorizeUser(User user) {
         user.setEnabled(true);
         repository.save(user);
+    }
+
+    @Override
+    public Optional<User> getLoggedUser(Authentication authentication) {
+        if (Optional.ofNullable(authentication).isPresent()) {
+            Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+            String username = ((UserDetails) principal).getUsername();
+            Optional<User> UserEntity = getOptionalUserByEmail(username);
+
+            if (UserEntity.isPresent()) {
+                return UserEntity;
+            }
+        }
+        return Optional.empty();
+    }
+
+    @Override
+    public void getUserAccountView(final Model model, Authentication authentication) {
+        Optional<User> loggedUserOptional = getLoggedUser(authentication);
+        if (loggedUserOptional.isPresent()) {
+            User loggedUser = loggedUserOptional.get();
+            model.addAttribute("userName", loggedUser.getUserName());
+            model.addAttribute("pluginsCount", loggedUser.getPluginsCount());
+            model.addAttribute("wPLN", loggedUser.getWPLN());
+        }
     }
 }

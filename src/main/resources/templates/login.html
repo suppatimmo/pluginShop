@@ -84,9 +84,8 @@
             <div class="col-lg-6 offset-lg-3">
                 <div class="login-form">
                     <h2>Panel logowania</h2>
-
                     <form th:action="@{/login}" method="post">
-                        <div class="alert alert-danger" style="display:none"></div>
+                        <div th:if="${param.error}" class="alert alert-danger">Podane dane są nieprawidłowe.</div>
                         <div class="group-input">
                             <label for="email">Adres e-mail</label>
                             <input type="text" name="email" id="email" placeholder="Adres e-mail" required="true"
